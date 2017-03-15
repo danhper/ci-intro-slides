@@ -1,0 +1,80 @@
+section
+  h3
+    | Introduction to
+    br
+    |  Continuous Integration
+  h4
+    | Daniel Perez @ RIT
+  p
+    a(href="http://bit.ly/ci-intro" target="_blank") http://bit.ly/ci-intro
+
+section
+  h2 Continuous integration
+  ul.fragment
+    li Why?
+    li What?
+    li When?
+    li How?
+
+section
+  h3 Main goal
+  p centralized and iterative check for correctness
+  ul.fragment
+    li avoid bugs in the code base
+    li make setups reproducible
+
+section
+  section
+    h3 It works on my computer
+    img.fragment(src="images/coco.png")
+
+  section
+    h3 It works on my computer
+    img(src="images/coco-error.png")
+
+  section
+    h3 It works on my computer
+    ul
+      li Locally installed software
+      li.fragment(data-fragment-index="2")
+        | System level dependency
+        br
+        | e.g. Particular version of <code>MySQL</code>
+      li.fragment(data-fragment-index="2")
+        | OS dependent features
+        br
+        | e.g. <code>epoll</code> for IO events
+      li.fragment(data-fragment-index="2")
+        | Platform dependent features
+        br
+        | e.g. <code>SIMD</code> instructions
+
+section
+  section
+    h3 What is Continuous Integration?
+    p.fragment Check the software everytime the code is changed
+    ul.fragment
+      li Run test suites
+      li Run static code analysis tools
+      li.fragment Deploy the code (continuous deployment)
+
+  section
+    img(src="https://insights.sei.cmu.edu/assets/content/image%20for%20continuous%20integration%20and%20devops_01262015.jpg")
+    small
+      a(href="https://insights.sei.cmu.edu/assets/content/image%20for%20continuous%20integration%20and%20devops_01262015.jpg") Carnegie Mellon University blog
+
+section
+  h2 When should I use CI?
+  ul.fragment(data-fragment-index="1")
+    li Deploying code to actual users
+    li Writing library code used by other people
+    li.fragment(data-fragment-index="2") Working with other people on the same code
+    li.fragment(data-fragment-index="2") Working on the same code for more than a few weeks
+
+section
+  h2 How to use CI?
+  h3 Short intro to Circle CI
+  ol
+    li How to setup a project
+    li How to configure the CI server
+    li How to deploy your code automatically
